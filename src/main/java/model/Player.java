@@ -13,7 +13,7 @@ public class Player {
 	private int kills;
 	private int games;
 	private IStack<Gun> list;
-	private ArrayList<Gun> gunList;
+
 	
 	
 	public Player(String name, String platform , int ping, int experience, int kills, int games, Gun initGun) {
@@ -37,7 +37,6 @@ public class Player {
 	public void addGun(Gun theGun) throws Exception {
 
 			list.push(theGun);
-			gunList.add(0, theGun);
 			
 	}
 	

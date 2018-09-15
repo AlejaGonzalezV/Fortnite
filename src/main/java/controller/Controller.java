@@ -125,6 +125,7 @@ public class Controller implements Initializable{
     	URL route28 = getClass().getResource("/data/guns/28b.png");
     	Image imageGun28 = new Image(route28.toString());
     	gunImage.setGraphic(new ImageView(imageGun28));
+    	gunName.setText("STINK BOMB");
 
     }
 
@@ -134,6 +135,7 @@ public class Controller implements Initializable{
     	URL route27 = getClass().getResource("/data/guns/27b.png");
     	Image imageGun27 = new Image(route27.toString());
     	gunImage.setGraphic(new ImageView(imageGun27));
+    	gunName.setText("REMOTE EXPLOSIVES");
 
     }
 
@@ -143,6 +145,7 @@ public class Controller implements Initializable{
     	URL route24 = getClass().getResource("/data/guns/24b.png");
     	Image imageGun24 = new Image(route24.toString());
     	gunImage.setGraphic(new ImageView(imageGun24));
+    	gunName.setText("COMPACT SMG");
 
     }
 
@@ -152,6 +155,7 @@ public class Controller implements Initializable{
     	URL route25 = getClass().getResource("/data/guns/25b.png");
     	Image imageGun25 = new Image(route25.toString());
     	gunImage.setGraphic(new ImageView(imageGun25));
+    	gunName.setText("GRENADE");
 
     }
 
@@ -161,6 +165,7 @@ public class Controller implements Initializable{
     	URL route26 = getClass().getResource("/data/guns/26b.png");
     	Image imageGun26 = new Image(route26.toString());
     	gunImage.setGraphic(new ImageView(imageGun26));
+    	gunName.setText("CLINGER");
 
     }
 
@@ -170,6 +175,7 @@ public class Controller implements Initializable{
     	URL route22 = getClass().getResource("/data/guns/22b.png");
     	Image imageGun22 = new Image(route22.toString());
     	gunImage.setGraphic(new ImageView(imageGun22));
+    	gunName.setText("GRENADE LAUNCHER");
 
     }
 
@@ -179,6 +185,7 @@ public class Controller implements Initializable{
     	URL route23 = getClass().getResource("/data/guns/23b.png");
     	Image imageGun23 = new Image(route23.toString());
     	gunImage.setGraphic(new ImageView(imageGun23));
+    	gunName.setText("GUIDED MISSILE");
 
     }
 
@@ -188,6 +195,7 @@ public class Controller implements Initializable{
     	URL route15 = getClass().getResource("/data/guns/15b.png");
     	Image imageGun15 = new Image(route15.toString());
     	gunImage.setGraphic(new ImageView(imageGun15));
+    	gunName.setText("PUMP SHOTGUN");
 
     }
 
@@ -197,6 +205,7 @@ public class Controller implements Initializable{
     	URL route20 = getClass().getResource("/data/guns/20b.png");
     	Image imageGun20 = new Image(route20.toString());
     	gunImage.setGraphic(new ImageView(imageGun20));
+    	gunName.setText("HUNTING RIFLE");
 
     }
 
@@ -206,6 +215,7 @@ public class Controller implements Initializable{
     	URL route19 = getClass().getResource("/data/guns/19b.png");
     	Image imageGun19 = new Image(route19.toString());
     	gunImage.setGraphic(new ImageView(imageGun19));
+    	gunName.setText("SEMI-AUTO SNIPER RIFLE");
 
     }
 
@@ -215,6 +225,7 @@ public class Controller implements Initializable{
     	URL route18 = getClass().getResource("/data/guns/18b.png");
     	Image imageGun18 = new Image(route18.toString());
     	gunImage.setGraphic(new ImageView(imageGun18));
+    	gunName.setText("BOLT-ACTION SNIPER RIFLE");
 
     }
 
@@ -224,6 +235,7 @@ public class Controller implements Initializable{
     	URL route17 = getClass().getResource("/data/guns/17b.png");
     	Image imageGun17 = new Image(route17.toString());
     	gunImage.setGraphic(new ImageView(imageGun17));
+    	gunName.setText("HEAVY SHOTGUN");
 
     }
 
@@ -233,6 +245,7 @@ public class Controller implements Initializable{
     	URL route16 = getClass().getResource("/data/guns/16b.png");
     	Image imageGun16 = new Image(route16.toString());
     	gunImage.setGraphic(new ImageView(imageGun16));
+    	gunName.setText("TACTICAL SHOTGUN");
 
     }
 
@@ -242,6 +255,7 @@ public class Controller implements Initializable{
     	URL route21 = getClass().getResource("/data/guns/21b.png");
     	Image imageGun21 = new Image(route21.toString());
     	gunImage.setGraphic(new ImageView(imageGun21));
+    	gunName.setText("ROCKET LAUNCHER");
 
     }
 
@@ -251,6 +265,7 @@ public class Controller implements Initializable{
     	URL route9 = getClass().getResource("/data/guns/9b.png");
     	Image imageGun9 = new Image(route9.toString());
     	gunImage.setGraphic(new ImageView(imageGun9));
+    	gunName.setText("MINIGUN");
 
     }
 
@@ -260,6 +275,7 @@ public class Controller implements Initializable{
     	URL route8 = getClass().getResource("/data/guns/8b.png");
     	Image imageGun8 = new Image(route8.toString());
     	gunImage.setGraphic(new ImageView(imageGun8));
+    	gunName.setText("SUBMACHINE GUN");
     	
 
     }
@@ -270,6 +286,7 @@ public class Controller implements Initializable{
     	URL route12 = getClass().getResource("/data/guns/12b.png");
     	Image imageGun12 = new Image(route12.toString());
     	gunImage.setGraphic(new ImageView(imageGun12));
+    	gunName.setText("SUPPRESSED PISTOL");
 
     }
 
@@ -279,6 +296,7 @@ public class Controller implements Initializable{
     	URL route11 = getClass().getResource("/data/guns/11b.png");
     	Image imageGun11 = new Image(route11.toString());
     	gunImage.setGraphic(new ImageView(imageGun11));
+    	gunName.setText("REVOLVER");
 
     }
 
@@ -288,6 +306,7 @@ public class Controller implements Initializable{
     	URL route10 = getClass().getResource("/data/guns/10b.png");
     	Image imageGun10 = new Image(route10.toString());
     	gunImage.setGraphic(new ImageView(imageGun10));
+    	gunName.setText("PISTOL");
 
     }
 
@@ -297,6 +316,7 @@ public class Controller implements Initializable{
     	URL route14 = getClass().getResource("/data/guns/14b.png");
     	Image imageGun14 = new Image(route14.toString());
     	gunImage.setGraphic(new ImageView(imageGun14));
+    	gunName.setText("DUAL PISTOL");
 
     }
 
@@ -306,6 +326,7 @@ public class Controller implements Initializable{
     	URL route13 = getClass().getResource("/data/guns/13b.png");
     	Image imageGun13 = new Image(route13.toString());
     	gunImage.setGraphic(new ImageView(imageGun13));
+    	gunName.setText("HAND CANNON");
 
     }
 
@@ -315,6 +336,7 @@ public class Controller implements Initializable{
     	URL route3 = getClass().getResource("/data/guns/3b.png");
     	Image imageGun3 = new Image(route3.toString());
     	gunImage.setGraphic(new ImageView(imageGun3));
+    	gunName.setText("ASSAULT RIFLE (M4)");
 
     }
 
@@ -324,6 +346,7 @@ public class Controller implements Initializable{
     	URL route2 = getClass().getResource("/data/guns/2b.png");
     	Image imageGun2 = new Image(route2.toString());
     	gunImage.setGraphic(new ImageView(imageGun2));
+    	gunName.setText("ASSAULT RIFLE (BURST)");
 
     }
 
@@ -333,6 +356,7 @@ public class Controller implements Initializable{
     	URL route1 = getClass().getResource("/data/guns/1b.png");
     	Image imageGun1 = new Image(route1.toString());
     	gunImage.setGraphic(new ImageView(imageGun1));
+    	gunName.setText("ASSAULT RIFLE (SCOPED)");
 
     }
 
@@ -342,6 +366,7 @@ public class Controller implements Initializable{
     	URL route7 = getClass().getResource("/data/guns/7b.png");
     	Image imageGun7 = new Image(route7.toString());
     	gunImage.setGraphic(new ImageView(imageGun7));
+    	gunName.setText("SUPPRESSED SUBMACHINE GUN");
 
     }
 
@@ -351,6 +376,7 @@ public class Controller implements Initializable{
     	URL route6 = getClass().getResource("/data/guns/6b.png");
     	Image imageGun6 = new Image(route6.toString());
     	gunImage.setGraphic(new ImageView(imageGun6));
+    	gunName.setText("LIGHT MACHINE GUN");
 
     }
 
@@ -360,7 +386,8 @@ public class Controller implements Initializable{
     	URL route5 = getClass().getResource("/data/guns/5b.png");
     	Image imageGun5 = new Image(route5.toString());
     	gunImage.setGraphic(new ImageView(imageGun5));
-
+    	gunName.setText("ASSAULT RIFLE (BURST RARE)");
+    	
     }
 
     @FXML
@@ -369,6 +396,7 @@ public class Controller implements Initializable{
     	URL route4 = getClass().getResource("/data/guns/4b.png");
     	Image imageGun4 = new Image(route4.toString());
     	gunImage.setGraphic(new ImageView(imageGun4));
+    	gunName.setText("ASSAULT RIFLE (SCAR)");
     	
     }
 
