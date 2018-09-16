@@ -5,25 +5,20 @@ import interfaces.IStack;
 import structures.*;
 
 public class Player {
-	
+
 	private String name;
 	private String platform;
 	private int ping;
-	private int experience;
-	private int kills;
-	private int games;
+
 	private IStack<Gun> list;
 
 	
 	
-	public Player(String name, String platform , int ping, int experience, int kills, int games, Gun initGun) {
+	public Player(String name, String platform , int ping, Gun initGun) {
 		
 		list = new Structures<Gun>();
 		this.name = name;
 		this.ping = ping;
-		this.experience = experience;
-		this.kills = kills;
-		this.games = games;
 		this.platform = platform;
 		try {
 			addGun(initGun);
@@ -31,6 +26,55 @@ public class Player {
 			e.printStackTrace();
 		}
 			
+	}
+	
+	public void deleteGun() {
+		
+		try {
+			list.pop();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public String nameFirstGun() {
+		
+		String name = null;
+		
+		try {
+			name = list.top().getName();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		return name;
+	}
+	
+	public int bulletsFirstGun() {
+		
+		int bullets=0;
+		
+		try {
+			bullets = list.top().getBullets();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		return bullets;
+		
+	}
+	
+	public IStack<Gun> getList() {
+		return list;
+	}
+
+
+	public void setList(IStack<Gun> list) {
+		this.list = list;
 	}
 	
 	
@@ -45,12 +89,16 @@ public class Player {
 		
 		try {
 			
-			list.top().setBullets(list.top().getBullets()-1);
-			
-			if(list.top().getBullets() == 0) {
+			if(list.top().getName() != "Pickaxe") {
 				
-				list.pop();
+				list.top().setBullets(list.top().getBullets()-1);
 				
+				if(list.top().getBullets() == -1) {
+					
+					
+					list.pop();
+					
+				}
 			}
 			
 		} catch (Exception e) {
@@ -84,29 +132,7 @@ public class Player {
 		this.ping = ping;
 	}
 
-	public int getExperience() {
-		return experience;
-	}
 
-	public void setExperience(int experience) {
-		this.experience = experience;
-	}
-
-	public int getKills() {
-		return kills;
-	}
-
-	public void setKills(int kills) {
-		this.kills = kills;
-	}
-
-	public int getGames() {
-		return games;
-	}
-
-	public void setGames(int games) {
-		this.games = games;
-	}
 
 
 	

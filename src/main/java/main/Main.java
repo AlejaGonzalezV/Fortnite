@@ -1,6 +1,6 @@
 package main;
 
-
+import model.*;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class Main extends Application{
 		Scene scene = new Scene(root);
 		
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("gxfgh");
+		primaryStage.setTitle("Fortnite");
 		primaryStage.show();
 		
 		
@@ -31,25 +31,9 @@ public class Main extends Application{
 	public static void main (String[] args) {
 		launch(args);
 		
-
-		
-		ArrayList<Integer> lista = new ArrayList<Integer>();
-		lista.add(0,1);
-		lista.add(0,2);
-		lista.add(0,3);
-		lista.add(0,4);
-		lista.add(0,5);
-		lista.add(0,6);
-		lista.add(0,7);
-
-		
-		for(int i=0; i<lista.size(); i++) {
-			
-			System.out.println(lista.get(i));
-			
-		}
 		
 		
 	}
+		
 	
 }
