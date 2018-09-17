@@ -41,8 +41,9 @@ public class PlayerTest extends TestCase {
 		
 		String firstname = player.nameFirstGun();
 		
-		assertEquals(firstname, name);
+		assertEquals(firstname, gun.getName());
 	}
+	
 	@Test
 	public void testBulletsFirstGun() {
 		
@@ -55,6 +56,7 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testAddGun() throws Exception {
 		
+		escenarioUno();
 		Gun gun2 = new Gun("Ross", 21);
 		
 		try {

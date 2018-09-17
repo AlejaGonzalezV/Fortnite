@@ -23,7 +23,7 @@ public class Player {
 		try {
 			addGun(initGun);
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.getMessage();
 		}
 			
 	}
@@ -34,7 +34,7 @@ public class Player {
 			list.pop();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.getMessage();
 		}
 		
 	}
@@ -47,7 +47,7 @@ public class Player {
 			name = list.top().getName();
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			e.getMessage();
 		}
 		
 		return name;
@@ -61,7 +61,7 @@ public class Player {
 			bullets = list.top().getBullets();
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			e.getMessage();
 		}
 		
 		return bullets;
@@ -103,7 +103,7 @@ public class Player {
 			
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			e.getMessage();
 		}
 		
 	}

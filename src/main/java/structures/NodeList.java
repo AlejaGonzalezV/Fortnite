@@ -3,7 +3,7 @@ package structures;
 public class NodeList<N> {
 	
 	private N info;
-	private NodeList next;
+	private NodeList<N> next;
 	
 	public NodeList(N info) {
 		
@@ -19,10 +19,10 @@ public class NodeList<N> {
 		this.info = info;
 	}
 
-	public NodeList getNext() {
+	public NodeList<N> getNext() {
 		return next;
 	}
-	public void setNext(NodeList next) {
+	public void setNext(NodeList<N> next) {
 		this.next = next;
 	}
 	
