@@ -21,6 +21,11 @@ public class Game {
 		table.insert(user, user.getPing());
 		
 	}
+	
+	public int position(Player user) {
+		
+		return table.hashFunction(user.getPing());
+	}
 
 	public Player getPlayer() {
 		return player;

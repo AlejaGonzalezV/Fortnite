@@ -131,6 +131,10 @@ public class Player {
 	public void setPing(int ping) {
 		this.ping = ping;
 	}
+	
+	public String toString() {
+		return name;
+	}
 
 
 

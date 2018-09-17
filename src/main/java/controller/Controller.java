@@ -228,7 +228,7 @@ public class Controller implements Initializable{
     private TextField userArea;
 
     @FXML
-    private TableView<?> pcTable;
+    private TableView<Player> pcTable;
 
     @FXML
     private TextField pingArea;
@@ -248,7 +248,9 @@ public class Controller implements Initializable{
     	String user = userArea.getText();
     	String platform = platformArea.getText();
     	int ping =Integer.parseInt((pingArea.getText()));
-    	game.addPlayer(new Player(user, platform, ping, new Gun("Pickaxe", 0)));
+    	Player player = new Player(user, platform, ping, new Gun("Pickaxe", 0));
+    	game.addPlayer(player);
+    	
     	
 
     }
