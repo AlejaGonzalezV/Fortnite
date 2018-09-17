@@ -8,7 +8,133 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="953.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
   <tabs>
-    <Tab text="Modo plataformas" />
+    <Tab text="Modo plataformas">
+         <content>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="userArea" layoutX="66.0" layoutY="58.0" />
+                        <TextField fx:id="pingArea" layoutX="66.0" layoutY="150.0" />
+                        <TextField fx:id="platformArea" layoutX="66.0" layoutY="253.0" />
+                        <Button fx:id="addPlayerBut" layoutX="82.0" layoutY="338.0" mnemonicParsing="false" onAction="#butAddPlayer" prefHeight="49.0" prefWidth="118.0" text="Add Player">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="usertxt" layoutX="65.0" layoutY="34.0" prefHeight="23.0" prefWidth="154.0" text="User Id">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pingtxt" layoutX="65.0" layoutY="127.0" prefHeight="23.0" prefWidth="154.0" text="Ping">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="platformtxt" layoutX="64.0" layoutY="230.0" prefHeight="23.0" prefWidth="154.0" text="Platform">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Accordion prefHeight="530.0" prefWidth="666.0">
+                          <panes>
+                            <TitledPane animated="false" text="PC">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="pcTable" prefHeight="404.0" prefWidth="665.0">
+                                            <columns>
+                                              <TableColumn fx:id="pcC1" minWidth="50.0" prefWidth="133.0" text="C1" />
+                                              <TableColumn fx:id="pcC2" minWidth="50.0" prefWidth="133.0" text="C2" />
+                                                <TableColumn fx:id="pcC3" prefWidth="133.0" text="C3" />
+                                                <TableColumn fx:id="pcC4" prefWidth="133.0" text="C4" />
+                                                <TableColumn fx:id="pcC5" prefWidth="133.0" text="C5" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Xbox">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView prefHeight="406.0" prefWidth="664.0" fx:id="xboxTable">
+                                            <columns>
+                                              <TableColumn prefWidth="133.0" text="C1" fx:id="xboxC1" />
+                                              <TableColumn prefWidth="133.0" text="C2" fx:id="xboxC2" />
+                                                <TableColumn prefWidth="133.0" text="C3" fx:id="xboxC3" />
+                                                <TableColumn prefWidth="133.0" text="C4" fx:id="xboxC4" />
+                                                <TableColumn prefWidth="133.0" text="C5" fx:id="xboxC5" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane fx:id="psTable" animated="false" text="Playstation">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView prefHeight="404.0" prefWidth="666.0">
+                                            <columns>
+                                              <TableColumn fx:id="playC1" prefWidth="133.0" text="C1" />
+                                              <TableColumn fx:id="playC2" prefWidth="133.0" text="C2" />
+                                                <TableColumn fx:id="playC3" prefWidth="133.0" text="C3" />
+                                                <TableColumn fx:id="playC4" prefWidth="133.0" text="C4" />
+                                                <TableColumn fx:id="playC5" prefWidth="133.0" text="C5" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane fx:id="nintendoTable" animated="false" text="Nintendo">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView prefHeight="405.0" prefWidth="664.0">
+                                            <columns>
+                                              <TableColumn fx:id="nintendoC1" prefWidth="133.0" text="C1" />
+                                              <TableColumn fx:id="nintendoC2" prefWidth="133.0" text="C2" />
+                                                <TableColumn fx:id="nintendoC3" prefWidth="133.0" text="C3" />
+                                                <TableColumn fx:id="nintendoC4" prefWidth="133.0" text="C4" />
+                                                <TableColumn fx:id="nintendoC5" prefWidth="133.0" text="C5" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="iPhoneTable" animated="false" prefHeight="426.0" prefWidth="666.0" text="iPhone">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView prefHeight="407.0" prefWidth="666.0">
+                                            <columns>
+                                              <TableColumn fx:id="iphoneC1" prefWidth="133.0" text="C1" />
+                                              <TableColumn fx:id="iphoneC2" prefWidth="133.0" text="C2" />
+                                                <TableColumn fx:id="iphoneC3" prefWidth="133.0" text="C3" />
+                                                <TableColumn fx:id="iphoneC4" prefWidth="133.0" text="C4" />
+                                                <TableColumn fx:id="iphoneC5" prefWidth="133.0" text="C5" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
     <Tab text="Modo San Valentin">
          <content>
             <AnchorPane prefHeight="467.0" prefWidth="899.0">
