@@ -60,7 +60,7 @@ public class GunTest extends TestCase{
 		gun.setBullets(newbullets);
 		
 		int updatedBullests = gun.getBullets();
-		assertTrue(newbullets != updatedBullests);
+		assertTrue(newbullets == updatedBullests);
 		
 	}
 	
