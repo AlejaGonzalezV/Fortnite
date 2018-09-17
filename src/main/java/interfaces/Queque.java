@@ -11,4 +11,6 @@ public interface Queque<A> {
 	public A dequeque() throws Exception;
 	
 	public int sizeQ();
+	
+	public void removeAll();
 }

@@ -1,13 +1,24 @@
 package model;
+import interfaces.IHashTable;
 import structures.*;
 
 public class Game {
 	
 	private Player player;
+	private IHashTable<Player> table;
 	
 	public Game(Player player) {
 		
 		this.player = player;
+		table = new HashTable<Player>();
+		addPlayer(player);
+		
+		
+	}
+	
+	public void addPlayer(Player user) {
+		
+		table.insert(user, user.getPing());
 		
 	}
 

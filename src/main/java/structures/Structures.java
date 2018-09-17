@@ -153,6 +153,12 @@ public class Structures<S> implements IStack <S>, Queque<S>{
 		return sizeQ;
 	}
 
+	public void removeAll() {
+		
+		front = null;
+		last = null;
+	}
+
 	
 	
 

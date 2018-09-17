@@ -13,13 +13,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.*;
 
 public class Controller implements Initializable{
 	
-	Game game = new Game(new Player("Default", "PC", 30, new Gun("Pickaxe", 0)));
+	Game game = new Game(new Player("agv19x", "PC", 30, new Gun("Pickaxe", 0)));
+	
 
     @FXML
     private Button button25;
@@ -52,19 +54,19 @@ public class Controller implements Initializable{
     private Button button22;
 
     @FXML
-    private TableColumn<?, ?> nintendoC1;
+    private TableColumn<Player, String> nintendoC1;
 
     @FXML
     private Label bulletsTxt;
 
     @FXML
-    private TableColumn<?, ?> nintendoC4;
+    private TableColumn<Player, String> nintendoC4;
 
     @FXML
     private Button addPlayerBut;
 
     @FXML
-    private TableColumn<?, ?> nintendoC5;
+    private TableColumn<Player, String> nintendoC5;
 
     @FXML
     private TitledPane iPhoneTable;
@@ -73,13 +75,13 @@ public class Controller implements Initializable{
     private Button button28;
 
     @FXML
-    private TableColumn<?, ?> nintendoC2;
+    private TableColumn<Player, String> nintendoC2;
 
     @FXML
     private ListView<String> gunsList;
 
     @FXML
-    private TableColumn<?, ?> nintendoC3;
+    private TableColumn<Player, String> nintendoC3;
 
     @FXML
     private Label gunName;
@@ -154,49 +156,49 @@ public class Controller implements Initializable{
     private Button button19;
 
     @FXML
-    private TableColumn<?, ?> pcC4;
+    private TableColumn<Player, String> pcC4;
 
     @FXML
-    private TableColumn<?, ?> pcC5;
+    private TableColumn<Player, String> pcC5;
 
     @FXML
-    private TableColumn<?, ?> pcC1;
+    private TableColumn<Player, String> pcC1;
 
     @FXML
-    private TableColumn<?, ?> pcC2;
+    private TableColumn<Player, String> pcC2;
 
     @FXML
-    private TableColumn<?, ?> pcC3;
+    private TableColumn<Player, String> pcC3;
 
     @FXML
-    private TableColumn<?, ?> playC5;
+    private TableColumn<Player, String> playC5;
 
     @FXML
-    private TableColumn<?, ?> xboxC4;
+    private TableColumn<Player, String> xboxC4;
 
     @FXML
-    private TableColumn<?, ?> playC3;
+    private TableColumn<Player, String> playC3;
 
     @FXML
-    private TableColumn<?, ?> xboxC5;
+    private TableColumn<Player, String> xboxC5;
 
     @FXML
-    private TableColumn<?, ?> playC4;
+    private TableColumn<Player, String> playC4;
 
     @FXML
-    private TableColumn<?, ?> xboxC2;
+    private TableColumn<Player, String> xboxC2;
 
     @FXML
-    private TableColumn<?, ?> playC1;
+    private TableColumn<Player, String> playC1;
 
     @FXML
-    private TableColumn<?, ?> xboxC3;
+    private TableColumn<Player, String> xboxC3;
 
     @FXML
-    private TableColumn<?, ?> playC2;
+    private TableColumn<Player, String> playC2;
 
     @FXML
-    private TableColumn<?, ?> xboxC1;
+    private TableColumn<Player, String> xboxC1;
 
     @FXML
     private Label gunImage;
@@ -211,16 +213,16 @@ public class Controller implements Initializable{
     private Button button1;
 
     @FXML
-    private TableColumn<?, ?> iphoneC3;
+    private TableColumn<String, String> iphoneC3;
 
     @FXML
-    private TableColumn<?, ?> iphoneC2;
+    private TableColumn<String, String> iphoneC2;
 
     @FXML
-    private TableColumn<?, ?> iphoneC5;
+    private TableColumn<String, String> iphoneC5;
 
     @FXML
-    private TableColumn<?, ?> iphoneC4;
+    private TableColumn<String, String> iphoneC4;
 
     @FXML
     private TextField userArea;
@@ -242,6 +244,12 @@ public class Controller implements Initializable{
 
     @FXML
     void butAddPlayer(ActionEvent event) {
+    	
+    	String user = userArea.getText();
+    	String platform = platformArea.getText();
+    	int ping =Integer.parseInt((pingArea.getText()));
+    	game.addPlayer(new Player(user, platform, ping, new Gun("Pickaxe", 0)));
+    	
 
     }
 
