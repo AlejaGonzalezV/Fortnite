@@ -85,6 +85,10 @@ public class HashTable<A> implements IHashTable<A> {
 		size++;
 
 	}
+	
+	public Queque<A> queueActual(int key){
+		return table[key];
+	}
 
 	
 	public A Get(Number key) {

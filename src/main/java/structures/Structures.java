@@ -157,6 +157,7 @@ public class Structures<S> implements IStack <S>, Queque<S>{
 		
 		front = null;
 		last = null;
+		sizeQ = 0;
 	}
 
 	

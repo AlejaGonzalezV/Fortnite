@@ -66,6 +66,58 @@ public class Game {
 
 		return pos;
 	}
+	
+	public boolean QueueFull(int key, String platform) {
+		boolean full = false;
+		if(platform.equals("PC")) {
+			if(PC.queueActual(key).sizeQ() == 10) {
+				full = true;
+			}
+		}else if(platform.equals("Xbox")) {
+			if(Xbox.queueActual(key).sizeQ() == 10) {
+				full = true;
+			}
+		}else if(platform.equals("Playstation")) {
+			if(Playstation.queueActual(key).sizeQ() == 10) {
+				full = true;
+			}
+		}else if(platform.equals("Nintendo")) {
+			if(Nintendo.queueActual(key).sizeQ() == 10) {
+				full = true;
+			}
+		}else if(platform.equals("iPhone")) {
+			if(iPhone.queueActual(key).sizeQ() == 10) {
+				full = true;
+			}
+		}
+		
+		return full;
+	}
+	
+	public void removeQueue(int key, String platform) {
+		
+		if(platform.equals("PC")) {
+			
+			PC.queueActual(key).removeAll();
+
+		}else if(platform.equals("Xbox")) {
+			
+			Xbox.queueActual(key).removeAll();
+			
+		}else if(platform.equals("Playstation")) {
+			
+			Playstation.queueActual(key).removeAll();
+			
+		}else if(platform.equals("Nintendo")) {
+			
+			Nintendo.queueActual(key).removeAll();
+			
+		}else if(platform.equals("iPhone")) {
+			
+			iPhone.queueActual(key).removeAll();
+			
+		}
+	}
 
 	public Player getPlayer() {
 		return player;
