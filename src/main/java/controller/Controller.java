@@ -21,7 +21,7 @@ import model.*;
 public class Controller implements Initializable{
 	
 	Game game = new Game(new Player("agv19x", "PC", 30, new Gun("Pickaxe", 0)));
-
+	 
     @FXML
     private Button button25;
 
@@ -318,6 +318,82 @@ public class Controller implements Initializable{
         int ping =Integer.parseInt((pingArea.getText()));
         Player player = new Player(user, platform, ping, new Gun("Pickaxe", 0));
         game.addPlayer(player);
+        int position = game.position(player);
+        
+        if(player.getPlatform().equals("PC")) {
+			
+        	if(position == 0) {
+        		pcTable1.getItems().addAll(player);
+        	}else if(position == 1) {
+        		pcTable2.getItems().addAll(player);
+        	}else if(position == 2) {
+        		pcTable3.getItems().addAll(player);
+        	}else if(position == 3) {
+        		pcTable4.getItems().addAll(player);
+        	}else if(position == 4) {
+        		pcTable5.getItems().addAll(player);
+        	}
+			
+		}else if(player.getPlatform().equals("Xbox")) {
+			
+			if(position == 0) {
+        		xboxTable1.getItems().addAll(player);
+        	}else if(position == 1) {
+        		xboxTable2.getItems().addAll(player);
+        	}else if(position == 2) {
+        		xboxTable3.getItems().addAll(player);
+        	}else if(position == 3) {
+        		xboxTable4.getItems().addAll(player);
+        	}else if(position == 4) {
+        		xboxTable5.getItems().addAll(player);
+        	}
+			
+			
+		}else if(player.getPlatform().equals("Playstation")) {
+			
+			if(position == 0) {
+        		playTable1.getItems().addAll(player);
+        	}else if(position == 1) {
+        		playTable2.getItems().addAll(player);
+        	}else if(position == 2) {
+        		playTable3.getItems().addAll(player);
+        	}else if(position == 3) {
+        		playTable4.getItems().addAll(player);
+        	}else if(position == 4) {
+        		playTable5.getItems().addAll(player);
+        	}
+			
+			
+		}else if(player.getPlatform().equals("Nintendo")) {
+			
+			if(position == 0) {
+        		nintTable1.getItems().addAll(player);
+        	}else if(position == 1) {
+        		nintTable2.getItems().addAll(player);
+        	}else if(position == 2) {
+        		nintTable3.getItems().addAll(player);
+        	}else if(position == 3) {
+        		nintTable4.getItems().addAll(player);
+        	}else if(position == 4) {
+        		nintTable5.getItems().addAll(player);
+        	}
+			
+		}else if(player.getPlatform().equals("iPhone")) {
+			
+			if(position == 0) {
+        		iphoneTable1.getItems().addAll(player);
+        	}else if(position == 1) {
+        		iphoneTable2.getItems().addAll(player);
+        	}else if(position == 2) {
+        		iphoneTable3.getItems().addAll(player);
+        	}else if(position == 3) {
+        		iphoneTable4.getItems().addAll(player);
+        	}else if(position == 4) {
+        		iphoneTable5.getItems().addAll(player);
+        	}
+			
+		}
+        
 
     }
 
@@ -780,7 +856,39 @@ public class Controller implements Initializable{
             paintGuns();
             gunsList.setMouseTransparent( true );
             gunsList.setFocusTraversable( false );
+            
+            pcC1.setCellValueFactory(new PropertyValueFactory("name"));
+            pcC2.setCellValueFactory(new PropertyValueFactory("name"));
+            pcC3.setCellValueFactory(new PropertyValueFactory("name"));
+            pcC4.setCellValueFactory(new PropertyValueFactory("name"));
+            pcC5.setCellValueFactory(new PropertyValueFactory("name"));
         
+            playC1.setCellValueFactory(new PropertyValueFactory("name"));
+            playC2.setCellValueFactory(new PropertyValueFactory("name"));
+            playC3.setCellValueFactory(new PropertyValueFactory("name"));
+            playC4.setCellValueFactory(new PropertyValueFactory("name"));
+            playC5.setCellValueFactory(new PropertyValueFactory("name"));
+            
+            xboxC1.setCellValueFactory(new PropertyValueFactory("name"));
+            xboxC2.setCellValueFactory(new PropertyValueFactory("name"));
+            xboxC3.setCellValueFactory(new PropertyValueFactory("name"));
+            xboxC4.setCellValueFactory(new PropertyValueFactory("name"));
+            xboxC5.setCellValueFactory(new PropertyValueFactory("name"));
+            
+            nintC1.setCellValueFactory(new PropertyValueFactory("name"));
+            nintC2.setCellValueFactory(new PropertyValueFactory("name"));
+            nintC3.setCellValueFactory(new PropertyValueFactory("name"));
+            nintC4.setCellValueFactory(new PropertyValueFactory("name"));
+            nintC5.setCellValueFactory(new PropertyValueFactory("name"));
+            
+            iphoneC1.setCellValueFactory(new PropertyValueFactory("name"));
+            iphoneC2.setCellValueFactory(new PropertyValueFactory("name"));
+            iphoneC3.setCellValueFactory(new PropertyValueFactory("name"));
+            iphoneC4.setCellValueFactory(new PropertyValueFactory("name"));
+            iphoneC5.setCellValueFactory(new PropertyValueFactory("name"));
+            
+            pcTable2.getItems().addAll(new Player("agv19x", "PC", 30, new Gun("Pickaxe", 0)));
+            
     }
 
 }
