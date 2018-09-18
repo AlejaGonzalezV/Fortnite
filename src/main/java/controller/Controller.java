@@ -21,7 +21,6 @@ import model.*;
 public class Controller implements Initializable{
 	
 	Game game = new Game(new Player("agv19x", "PC", 30, new Gun("Pickaxe", 0)));
-	
 
     @FXML
     private Button button25;
@@ -54,19 +53,10 @@ public class Controller implements Initializable{
     private Button button22;
 
     @FXML
-    private TableColumn<Player, String> nintendoC1;
-
-    @FXML
     private Label bulletsTxt;
 
     @FXML
-    private TableColumn<Player, String> nintendoC4;
-
-    @FXML
     private Button addPlayerBut;
-
-    @FXML
-    private TableColumn<Player, String> nintendoC5;
 
     @FXML
     private TitledPane iPhoneTable;
@@ -75,19 +65,19 @@ public class Controller implements Initializable{
     private Button button28;
 
     @FXML
-    private TableColumn<Player, String> nintendoC2;
-
-    @FXML
     private ListView<String> gunsList;
 
     @FXML
-    private TableColumn<Player, String> nintendoC3;
+    private TableView<Player> pcTable3;
 
     @FXML
     private Label gunName;
 
     @FXML
-    private TableView<?> xboxTable;
+    private TableView<Player> pcTable4;
+
+    @FXML
+    private TableView<Player> pcTable5;
 
     @FXML
     private Label numBullets;
@@ -100,6 +90,12 @@ public class Controller implements Initializable{
 
     @FXML
     private TextField platformArea;
+
+    @FXML
+    private TableView<Player> pcTable1;
+
+    @FXML
+    private TableView<Player> pcTable2;
 
     @FXML
     private Button button14;
@@ -210,48 +206,118 @@ public class Controller implements Initializable{
     private TitledPane psTable;
 
     @FXML
+    private TableView<Player> xboxTable4;
+
+    @FXML
+    private TableView<Player> xboxTable3;
+
+    @FXML
+    private TableView<Player> xboxTable5;
+
+    @FXML
+    private TableView<Player> nintTable1;
+
+    @FXML
+    private TableView<Player> nintTable2;
+
+    @FXML
+    private TableView<Player> nintTable3;
+
+    @FXML
+    private TableView<Player> nintTable4;
+
+    @FXML
+    private TableView<Player> nintTable5;
+
+    @FXML
     private Button button1;
 
     @FXML
-    private TableColumn<String, String> iphoneC3;
+    private TableView<Player> xboxTable2;
 
     @FXML
-    private TableColumn<String, String> iphoneC2;
+    private TableView<Player> xboxTable1;
 
     @FXML
-    private TableColumn<String, String> iphoneC5;
+    private TableColumn<Player, String> nintC2;
 
     @FXML
-    private TableColumn<String, String> iphoneC4;
+    private TableColumn<Player, String> nintC3;
+
+    @FXML
+    private TableColumn<Player, String> nintC4;
+
+    @FXML
+    private TableColumn<Player, String> nintC5;
+
+    @FXML
+    private TableColumn<Player, String> iphoneC3;
+
+    @FXML
+    private TableColumn<Player, String> iphoneC2;
+
+    @FXML
+    private TableColumn<Player, String> iphoneC5;
+
+    @FXML
+    private TableColumn<Player, String> iphoneC4;
 
     @FXML
     private TextField userArea;
 
     @FXML
-    private TableView<Player> pcTable;
-
-    @FXML
     private TextField pingArea;
 
     @FXML
-    private TableColumn<?, ?> iphoneC1;
+    private TableColumn<Player, String> iphoneC1;
+
+    @FXML
+    private TableView<Player> iphoneTable5;
+
+    @FXML
+    private TableView<Player> iphoneTable4;
+
+    @FXML
+    private TableView<Player> iphoneTable3;
+
+    @FXML
+    private TableView<Player> iphoneTable2;
+
+    @FXML
+    private TableView<Player> playTable1;
+
+    @FXML
+    private TableView<Player> iphoneTable1;
 
     @FXML
     private Label gunTxt;
 
     @FXML
+    private TableView<Player> playTable2;
+
+    @FXML
+    private TableView<Player> playTable3;
+
+    @FXML
+    private TableView<Player> playTable4;
+
+    @FXML
+    private TableView<Player> playTable5;
+
+    @FXML
     private Label usertxt;
 
     @FXML
+    private TableColumn<Player, String> nintC1;
+
+    @FXML
     void butAddPlayer(ActionEvent event) {
-    	
-    	String user = userArea.getText();
-    	String platform = platformArea.getText();
-    	int ping =Integer.parseInt((pingArea.getText()));
-    	Player player = new Player(user, platform, ping, new Gun("Pickaxe", 0));
-    	game.addPlayer(player);
-    	
-    	
+        
+        String user = userArea.getText();
+        String platform = platformArea.getText();
+        int ping =Integer.parseInt((pingArea.getText()));
+        Player player = new Player(user, platform, ping, new Gun("Pickaxe", 0));
+        game.addPlayer(player);
 
     }
 
@@ -581,7 +647,7 @@ public class Controller implements Initializable{
             
             if(game.bullets() == 0) {
                 
-                gunsList.getItems().removeAll(game.gunName());
+                gunsList.getItems().remove(game.gunName());
                 numBullets.setText(String.valueOf(game.bullets()));
 
                 
@@ -708,16 +774,13 @@ public class Controller implements Initializable{
 
     }
 
-	public void initialize(URL location, ResourceBundle resources) {
-	
-		 images();
-	        paintGuns();
-	        gunsList.setMouseTransparent( true );
-	        gunsList.setFocusTraversable( false );
-		
-	}
-
-
-
+    public void initialize(URL location, ResourceBundle resources) {
+    
+         	images();
+            paintGuns();
+            gunsList.setMouseTransparent( true );
+            gunsList.setFocusTraversable( false );
+        
+    }
 
 }
