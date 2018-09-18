@@ -323,7 +323,7 @@ public class Controller implements Initializable{
         game.addPlayer(player);
         int position = game.position(player);
         
-        if(player.getPlatform().equals("PC")) {
+        if(player.getPlatform().equalsIgnoreCase("PC")) {
 			
         	if(position == 0) {
         		pcTable1.getItems().addAll(player);
@@ -358,7 +358,9 @@ public class Controller implements Initializable{
             		
             		pcTable2.getItems().clear();
             		
-        	}else if(position == 2) {
+        	}
+        	}
+        		else if(position == 2) {
         	
         		pcTable3.getItems().addAll(player);
         		
@@ -410,7 +412,8 @@ public class Controller implements Initializable{
         	}
 		//FALTAAAAAAAAAAAA	
         	}
-        }else if(player.getPlatform().equals("Xbox")) {
+        
+else if(player.getPlatform().equalsIgnoreCase("Xbox")) {
 			
 			if(position == 0) {
 
@@ -436,7 +439,7 @@ public class Controller implements Initializable{
         	}
 			
 			
-		}else if(player.getPlatform().equals("Playstation")) {
+		}else if(player.getPlatform().equalsIgnoreCase("Playstation")) {
 			
 			if(position == 0) {
         		playTable1.getItems().addAll(player);
@@ -451,7 +454,7 @@ public class Controller implements Initializable{
         	}
 			
 			
-		}else if(player.getPlatform().equals("Nintendo")) {
+		}else if(player.getPlatform().equalsIgnoreCase("Nintendo")) {
 			
 			if(position == 0) {
         		nintTable1.getItems().addAll(player);
@@ -465,7 +468,7 @@ public class Controller implements Initializable{
         		nintTable5.getItems().addAll(player);
         	}
 			
-		}else if(player.getPlatform().equals("iPhone")) {
+		}else if(player.getPlatform().equalsIgnoreCase("iPhone")) {
 			
 			if(position == 0) {
         		iphoneTable1.getItems().addAll(player);
