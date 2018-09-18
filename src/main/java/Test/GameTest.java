@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.Test;
 
+import interfaces.IHashTable;
 import junit.framework.TestCase;
 import model.Game;
 import model.Gun;
@@ -18,6 +19,16 @@ public class GameTest extends TestCase{
 		
 		player = new Player("Mark", "Xbox", 34, new Gun("sun", 21));
 		game = new Game(player);
+		
+	}
+	@Test
+	public void testPosition() {
+		
+		escenarioUno();
+		
+		int posActual = game.position(player);
+		
+		assertTrue(posActual == game.position(player));
 		
 	}
 	@Test
