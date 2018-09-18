@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -16,6 +18,7 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.StageStyle;
 import model.*;
 
 public class Controller implements Initializable{
@@ -324,28 +327,112 @@ public class Controller implements Initializable{
 			
         	if(position == 0) {
         		pcTable1.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "PC") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "PC");
+            		
+            		pcTable1.getItems().clear();
+  		
+            	}
+        		
         	}else if(position == 1) {
+        		
         		pcTable2.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "PC") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "PC");
+            		
+            		pcTable2.getItems().clear();
+            		
         	}else if(position == 2) {
+        	
         		pcTable3.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "PC") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "PC");
+            		
+            		pcTable3.getItems().clear();
+        		}
+        		
         	}else if(position == 3) {
         		pcTable4.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "PC") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "PC");
+            		
+            		pcTable4.getItems().clear();
+        		}
+	
         	}else if(position == 4) {
         		pcTable5.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "PC") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "PC");
+            		
+            		pcTable5.getItems().clear();
+            		
+        		}
         	}
-			
-		}else if(player.getPlatform().equals("Xbox")) {
+		//FALTAAAAAAAAAAAA	
+        	}
+        }else if(player.getPlatform().equals("Xbox")) {
 			
 			if(position == 0) {
+
         		xboxTable1.getItems().addAll(player);
+        		
         	}else if(position == 1) {
+        		
         		xboxTable2.getItems().addAll(player);
+        		
+        		
         	}else if(position == 2) {
+        		
         		xboxTable3.getItems().addAll(player);
+        		
         	}else if(position == 3) {
+        		
         		xboxTable4.getItems().addAll(player);
+        		
         	}else if(position == 4) {
+        		
         		xboxTable5.getItems().addAll(player);
+        		
         	}
 			
 			
