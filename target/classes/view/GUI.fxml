@@ -47,14 +47,30 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView fx:id="pcTable" prefHeight="404.0" prefWidth="665.0">
+                                          <TableView fx:id="pcTable1" prefHeight="404.0" prefWidth="133.0">
                                             <columns>
                                               <TableColumn fx:id="pcC1" minWidth="50.0" prefWidth="133.0" text="C1" />
-                                              <TableColumn fx:id="pcC2" minWidth="50.0" prefWidth="133.0" text="C2" />
-                                                <TableColumn fx:id="pcC3" prefWidth="133.0" text="C3" />
-                                                <TableColumn fx:id="pcC4" prefWidth="133.0" text="C4" />
-                                                <TableColumn fx:id="pcC5" prefWidth="133.0" text="C5" />
                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="pcTable2" layoutX="133.0" prefHeight="411.0" prefWidth="133.0">
+                                            <columns>
+                                              <TableColumn fx:id="pcC2" prefWidth="133.0" text="C2" />
+                                            </columns>
+                                          </TableView>
+                                          <TableView fx:id="pcTable3" layoutX="266.0" prefHeight="411.0" prefWidth="133.0">
+                                            <columns>
+                                              <TableColumn fx:id="pcC3" prefWidth="133.0" text="C3" />
+                                            </columns>
+                                          </TableView>
+                                          <TableView fx:id="pcTable4" layoutX="399.0" prefHeight="411.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="pcC4" prefWidth="133.0" text="C4" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="pcTable5" layoutX="532.0" prefHeight="411.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="pcC5" prefWidth="133.0" text="C5" />
+                                             </columns>
                                           </TableView>
                                        </children>
                                     </AnchorPane>
@@ -64,14 +80,30 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView prefHeight="406.0" prefWidth="664.0" fx:id="xboxTable">
+                                          <TableView prefHeight="406.0" prefWidth="133.0" fx:id="xboxTable1">
                                             <columns>
                                               <TableColumn prefWidth="133.0" text="C1" fx:id="xboxC1" />
-                                              <TableColumn prefWidth="133.0" text="C2" fx:id="xboxC2" />
-                                                <TableColumn prefWidth="133.0" text="C3" fx:id="xboxC3" />
-                                                <TableColumn prefWidth="133.0" text="C4" fx:id="xboxC4" />
-                                                <TableColumn prefWidth="133.0" text="C5" fx:id="xboxC5" />
                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="133.0" prefHeight="406.0" prefWidth="133.0" fx:id="xboxTable2">
+                                             <columns>
+                                                <TableColumn prefWidth="133.0" text="C2" fx:id="xboxC2" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="266.0" prefHeight="406.0" prefWidth="133.0" fx:id="xboxTable3">
+                                             <columns>
+                                                <TableColumn prefWidth="133.0" text="C3" fx:id="xboxC3" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="399.0" prefHeight="406.0" prefWidth="133.0" fx:id="xboxTable4">
+                                             <columns>
+                                                <TableColumn prefWidth="133.0" text="C4" fx:id="xboxC4" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="532.0" prefHeight="406.0" prefWidth="133.0" fx:id="xboxTable5">
+                                             <columns>
+                                                <TableColumn prefWidth="133.0" text="C5" fx:id="xboxC5" />
+                                             </columns>
                                           </TableView>
                                        </children>
                                     </AnchorPane>
@@ -81,14 +113,30 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView prefHeight="404.0" prefWidth="666.0">
+                                          <TableView fx:id="playTable1" prefHeight="404.0" prefWidth="133.0">
                                             <columns>
                                               <TableColumn fx:id="playC1" prefWidth="133.0" text="C1" />
-                                              <TableColumn fx:id="playC2" prefWidth="133.0" text="C2" />
-                                                <TableColumn fx:id="playC3" prefWidth="133.0" text="C3" />
-                                                <TableColumn fx:id="playC4" prefWidth="133.0" text="C4" />
-                                                <TableColumn fx:id="playC5" prefWidth="133.0" text="C5" />
                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="playTable2" layoutX="133.0" prefHeight="404.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="playC2" prefWidth="133.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="playTable3" layoutX="266.0" prefHeight="404.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="playC3" prefWidth="133.0" text="C3" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="playTable4" layoutX="399.0" prefHeight="404.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="playC4" prefWidth="133.0" text="C4" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="playTable5" layoutX="531.0" prefHeight="404.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="playC5" prefWidth="133.0" text="C5" />
+                                             </columns>
                                           </TableView>
                                        </children>
                                     </AnchorPane>
@@ -98,14 +146,30 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView prefHeight="405.0" prefWidth="664.0">
+                                          <TableView fx:id="nintTable1" prefHeight="405.0" prefWidth="133.0">
                                             <columns>
-                                              <TableColumn fx:id="nintendoC1" prefWidth="133.0" text="C1" />
-                                              <TableColumn fx:id="nintendoC2" prefWidth="133.0" text="C2" />
-                                                <TableColumn fx:id="nintendoC3" prefWidth="133.0" text="C3" />
-                                                <TableColumn fx:id="nintendoC4" prefWidth="133.0" text="C4" />
-                                                <TableColumn fx:id="nintendoC5" prefWidth="133.0" text="C5" />
+                                              <TableColumn fx:id="nintC1" prefWidth="133.0" text="C1" />
                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="nintTable2" layoutX="133.0" prefHeight="405.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="nintC2" prefWidth="133.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="nintTable3" layoutX="266.0" prefHeight="405.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="nintC3" prefWidth="133.0" text="C3" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="nintTable4" layoutX="399.0" prefHeight="405.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="nintC4" prefWidth="133.0" text="C4" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="nintTable5" layoutX="532.0" prefHeight="405.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="nintC5" prefWidth="133.0" text="C5" />
+                                             </columns>
                                           </TableView>
                                        </children>
                                     </AnchorPane>
@@ -115,14 +179,30 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView prefHeight="407.0" prefWidth="666.0">
+                                          <TableView fx:id="iphoneTable1" prefHeight="407.0" prefWidth="133.0">
                                             <columns>
                                               <TableColumn fx:id="iphoneC1" prefWidth="133.0" text="C1" />
-                                              <TableColumn fx:id="iphoneC2" prefWidth="133.0" text="C2" />
-                                                <TableColumn fx:id="iphoneC3" prefWidth="133.0" text="C3" />
-                                                <TableColumn fx:id="iphoneC4" prefWidth="133.0" text="C4" />
-                                                <TableColumn fx:id="iphoneC5" prefWidth="133.0" text="C5" />
                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="iphoneTable2" layoutX="133.0" prefHeight="407.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="iphoneC2" prefWidth="133.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="iphoneTable3" layoutX="266.0" prefHeight="407.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="iphoneC3" prefWidth="133.0" text="C3" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="iphoneTable4" layoutX="399.0" layoutY="-1.0" prefHeight="407.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="iphoneC4" prefWidth="133.0" text="C4" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="iphoneTable5" layoutX="532.0" layoutY="-1.0" prefHeight="407.0" prefWidth="133.0">
+                                             <columns>
+                                                <TableColumn fx:id="iphoneC5" prefWidth="133.0" text="C5" />
+                                             </columns>
                                           </TableView>
                                        </children>
                                     </AnchorPane>
