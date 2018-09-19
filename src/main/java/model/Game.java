@@ -21,7 +21,7 @@ public class Game {
 		iPhone = new HashTable<Player>();
 		
 		addPlayer(player);
-		
+	
 		
 	}
 	

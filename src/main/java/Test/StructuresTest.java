@@ -5,9 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.Test;
 
+import junit.framework.TestCase;
 import structures.Structures;
 
-public class StructuresTest {
+public class StructuresTest extends TestCase{
 
 	private String firstElement;
 	private Structures<String> estructure;
@@ -30,15 +31,21 @@ public class StructuresTest {
 	}
 	
 	@Test
-	public void testPop() throws Exception {
+	public void testPop() {
 		escenarioUno();
 		
 		estructure.push(firstElement);
 		
-		String actual = estructure.pop();
-		
-		assertEquals(estructure.getTop(), null);
+		try {
+			String actual = estructure.pop();
+			System.out.println(estructure.getTop());
+			assertEquals(estructure.getTop(), null);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
 	}
+	
 	@Test
 	public void testTop() throws Exception {
 		
