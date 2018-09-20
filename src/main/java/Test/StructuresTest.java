@@ -66,7 +66,7 @@ public class StructuresTest extends TestCase{
 		structure.push(firstElement);
 		
 		assertTrue(false == structure.isEmptyS());
-		
+	
 	}
 	@Test
 	public void testIsEmptyQ() {
@@ -106,6 +106,25 @@ public class StructuresTest extends TestCase{
 		
 		assertEquals(actual, firstElement);
 		
+	}
+	@Test 
+	public void testRemoveAll() {
+		stageOne();
+		
+		structure.enqueque(firstElement);
+		
+		structure.removeAll();
+		
+		assertEquals(structure.getTop(), null);
+	}
+	@Test
+	public void testSize() {
+		stageOne();
+		
+		structure.enqueque(firstElement);
+	
+		
+		assertTrue(structure.sizeS() == 1);
 	}
 }
 	
