@@ -12,7 +12,7 @@ public class StructuresTest {
 	private String firstElement;
 	private Structures<String> estructure;
 	
-	void escenarioUno() {
+	void stageOne() {
 		
 		firstElement = "hope";
 		estructure = new Structures<String>();
@@ -22,7 +22,7 @@ public class StructuresTest {
 	@Test
 	public void testPush() {
 		
-		escenarioUno();
+		stageOne();
 		
 		estructure.push(firstElement);
 		
@@ -31,7 +31,7 @@ public class StructuresTest {
 	
 	@Test
 	public void testPop() throws Exception {
-		escenarioUno();
+		stageOne();
 		
 		estructure.push(firstElement);
 		
@@ -42,7 +42,7 @@ public class StructuresTest {
 	@Test
 	public void testTop() throws Exception {
 		
-		escenarioUno();
+		stageOne();
 		
 		estructure.push(firstElement);
 		
@@ -54,7 +54,7 @@ public class StructuresTest {
 	@Test
 	public void TestIsEmptyS() {
 		
-		escenarioUno();
+		stageOne();
 		estructure.push(firstElement);
 		
 		assertTrue(false == estructure.isEmptyS());
@@ -63,7 +63,7 @@ public class StructuresTest {
 	@Test
 	public void testIsEmptyQ() {
 		
-		escenarioUno();
+		stageOne();
 		
 		estructure.enqueque(firstElement);
 		
@@ -72,7 +72,7 @@ public class StructuresTest {
 	@Test
 	public void testEnqueque()  {
 		
-		escenarioUno();
+		stageOne();
 		
 		estructure.enqueque(firstElement);
 		
@@ -82,7 +82,7 @@ public class StructuresTest {
 	@Test
 	public void testFront() throws Exception {
 		
-		escenarioUno();
+		stageOne();
 		estructure.enqueque(firstElement);
 		String actual = estructure.front();
 		assertEquals(actual, firstElement);
@@ -91,7 +91,7 @@ public class StructuresTest {
 	@Test
 	public void testDequeque() throws Exception {
 		
-		escenarioUno();
+		stageOne();
 		estructure.enqueque(firstElement);
 		
 		String actual = estructure.dequeque();

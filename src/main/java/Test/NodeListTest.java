@@ -13,7 +13,7 @@ public class NodeListTest extends TestCase {
 	private String verbsNext;
 	private NodeList<String> nodeList;
 	
-	 public void escenarioUno() {
+	 public void stageOne() {
 		
 		 verbs =  "Rise";
 		 nodeList =  new NodeList<String>(verbs);
@@ -22,7 +22,7 @@ public class NodeListTest extends TestCase {
 	@Test
 	public void testGetInfo() {
 		
-		escenarioUno();
+		stageOne();
 		
 		String remot = nodeList.getInfo();
 		assertEquals(remot, verbs);
@@ -30,7 +30,7 @@ public class NodeListTest extends TestCase {
 	}
 	@Test
 	public void testSetInfo() {
-		escenarioUno();
+		stageOne();
 		String change = " UP";
 		nodeList.setInfo(change);
 		

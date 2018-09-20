@@ -15,7 +15,8 @@ public class GameTest extends TestCase{
 
 	private Player player;
 	private Game game;
-	void escenarioUno() {
+
+	void stageOne() {
 		
 		player = new Player("Mark", "Xbox", 34, new Gun("sun", 21));
 		game = new Game(player);
@@ -24,7 +25,7 @@ public class GameTest extends TestCase{
 	@Test
 	public void testPosition() {
 		
-		escenarioUno();
+		stageOne();
 		
 		int posActual = game.position(player);
 		
@@ -34,7 +35,7 @@ public class GameTest extends TestCase{
 	@Test
 	public void testGetPlayer() {
 		
-		escenarioUno();
+		stageOne();
 		
 		assertEquals(game.getPlayer(), player);
 	}
@@ -42,7 +43,7 @@ public class GameTest extends TestCase{
 	@Test
 	public void testSetPlayer() {
 		
-		escenarioUno();
+		stageOne();
 		
 		Player other = new Player("Andrew", "Xbox", 21, null);
 		
@@ -53,7 +54,7 @@ public class GameTest extends TestCase{
 	@Test
 	public void testGunName() {
 		
-		escenarioUno();
+		stageOne();
 		
 		String gunActual = player.nameFirstGun();
 		
@@ -65,7 +66,7 @@ public class GameTest extends TestCase{
 	@Test
 	public void testBullets() {
 		
-		escenarioUno();
+		stageOne();
 		
 		int bulletsActual = player.bulletsFirstGun();
 		
@@ -77,7 +78,7 @@ public class GameTest extends TestCase{
 	@Test
 	public void testDeleteGun() {
 		
-		escenarioUno();
+		stageOne();
 		
 		game.deleteGun();
 		

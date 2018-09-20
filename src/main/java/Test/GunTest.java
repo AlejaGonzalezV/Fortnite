@@ -14,7 +14,7 @@ public class GunTest extends TestCase{
 	private int bullets;
 	private Gun gun;
 	
-	void escenarioUno() {
+	void stageOne() {
 		
 		
 		name = "Shark";
@@ -28,14 +28,14 @@ public class GunTest extends TestCase{
 	@Test
 	public void testGetName() {
 		
-		escenarioUno();
+		stageOne();
 	
 		assertEquals(gun.getName(), name);
 	}
 	@Test
 	public void testSetName() {
 		
-		escenarioUno();
+		stageOne();
 		
 		String other = "Bird";
 			
@@ -47,7 +47,7 @@ public class GunTest extends TestCase{
 	@Test
 	public void testGetBullets() {
 		
-		escenarioUno();
+		stageOne();
 		
 		int bullet = gun.getBullets();
 		assertTrue(bullets == bullet);
@@ -55,7 +55,7 @@ public class GunTest extends TestCase{
 	@Test
 	public void tesSettBullets() {
 		
-		escenarioUno();
+		stageOne();
 		int newbullets = 3;
 		gun.setBullets(newbullets);
 		

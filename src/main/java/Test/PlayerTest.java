@@ -18,7 +18,7 @@ public class PlayerTest extends TestCase {
 	private Gun gun;
 	private Player player;
 	
-	void escenarioUno() {
+	void stageOne() {
 		name = "Pittacus";
 		platform = "Xbox";
 		ping = 12;
@@ -28,7 +28,7 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testDeleteGun() throws Exception {
 		
-		escenarioUno();
+		stageOne();
 		
 		player.deleteGun();
 		assertEquals(player.getList().top(), null);
@@ -37,7 +37,7 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testNameFisrtGun() {
 		
-		escenarioUno();
+		stageOne();
 		
 		String firstname = player.nameFirstGun();
 		
@@ -47,7 +47,7 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testBulletsFirstGun() {
 		
-		escenarioUno();
+		stageOne();
 		
 		int firstGunBullets = player.bulletsFirstGun();
 		int actualBullets = gun.getBullets();
@@ -56,7 +56,7 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testAddGun() throws Exception {
 		
-		escenarioUno();
+		stageOne();
 		Gun gun2 = new Gun("Ross", 21);
 		
 		try {
@@ -72,14 +72,14 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testGetName() {
 		
-		escenarioUno();
+		stageOne();
 	
 		assertEquals(player.getName(), name);
 	}
 	@Test
 	public void testSetName() {
 		
-		escenarioUno();
+		stageOne();
 		
 		String other = "Rom";
 			
@@ -91,14 +91,14 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testGetPlatform() {
 		
-		escenarioUno();
+		stageOne();
 	
 		assertEquals(player.getPlatform(), platform);
 	}
 	@Test
 	public void testSetPlatform() {
 		
-		escenarioUno();
+		stageOne();
 		
 		String other = "iphone";
 			
@@ -110,14 +110,14 @@ public class PlayerTest extends TestCase {
 	@Test
 	public void testGetPing() {
 		
-		escenarioUno();
+		stageOne();
 	
 		assertEquals(player.getPing(), ping);
 	}
 	@Test
 	public void testSetPing() {
 		
-		escenarioUno();
+		stageOne();
 		
 		int other = 54;
 		player.setPing(other);
