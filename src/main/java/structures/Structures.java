@@ -46,11 +46,11 @@ public class Structures<S> implements IStack <S>, Queque<S>{
 		
 		if(top != null) {
 			
-			NodeList<S> delete = top;
+			S delete = top.getInfo();
 			top = top.getNext();
 			size--;
 			
-			return (S) delete.getInfo();
+			return delete;
 			
 		}
 		

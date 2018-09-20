@@ -323,7 +323,7 @@ public class Controller implements Initializable{
         game.addPlayer(player);
         int position = game.position(player);
         
-        if(player.getPlatform().equals("PC")) {
+        if(player.getPlatform().equalsIgnoreCase("PC")) {
 			
         	if(position == 0) {
         		pcTable1.getItems().addAll(player);
@@ -358,7 +358,9 @@ public class Controller implements Initializable{
             		
             		pcTable2.getItems().clear();
             		
-        	}else if(position == 2) {
+        	}
+        	}
+        		else if(position == 2) {
         	
         		pcTable3.getItems().addAll(player);
         		
@@ -408,75 +410,361 @@ public class Controller implements Initializable{
             		
         		}
         	}
-		//FALTAAAAAAAAAAAA	
+		
         	}
-        }else if(player.getPlatform().equals("Xbox")) {
+        
+        	else if(player.getPlatform().equalsIgnoreCase("Xbox")) {
 			
 			if(position == 0) {
 
         		xboxTable1.getItems().addAll(player);
         		
+        		if(game.QueueFull(position, "Xbox") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Xbox");
+            		
+            		xboxTable1.getItems().clear();
+  		
+            	}
+        		
         	}else if(position == 1) {
         		
         		xboxTable2.getItems().addAll(player);
         		
+        		if(game.QueueFull(position, "Xbox") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Xbox");
+            		
+            		xboxTable2.getItems().clear();
+  		
+            	}
         		
         	}else if(position == 2) {
         		
         		xboxTable3.getItems().addAll(player);
         		
+        		if(game.QueueFull(position, "Xbox") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Xbox");
+            		
+            		xboxTable3.getItems().clear();
+  		
+            	}
         	}else if(position == 3) {
         		
         		xboxTable4.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Xbox") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Xbox");
+            		
+            		xboxTable4.getItems().clear();
+  		
+            	}
         		
         	}else if(position == 4) {
         		
         		xboxTable5.getItems().addAll(player);
         		
+        		if(game.QueueFull(position, "Xbox") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Xbox");
+            		
+            		xboxTable5.getItems().clear();
+  		
+            	}
+        		
         	}
 			
 			
-		}else if(player.getPlatform().equals("Playstation")) {
+		}else if(player.getPlatform().equalsIgnoreCase("Playstation")) {
 			
 			if(position == 0) {
         		playTable1.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Playstation") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Playstation");
+            		
+            		playTable1.getItems().clear();
+  		
+            	}
+        		
         	}else if(position == 1) {
         		playTable2.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Playstation") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Playstation");
+            		
+            		playTable2.getItems().clear();
+  		
+            	}
+        		
         	}else if(position == 2) {
+        		
         		playTable3.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Playstation") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Playstation");
+            		
+            		playTable3.getItems().clear();
+  		
+            	}
+        		
         	}else if(position == 3) {
+        		
         		playTable4.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Playstation") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Playstation");
+            		
+            		playTable4.getItems().clear();
+  		
+            	}
+        		
         	}else if(position == 4) {
         		playTable5.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Playstation") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Playstation");
+            		
+            		playTable5.getItems().clear();
+  		
+            	}
         	}
 			
 			
-		}else if(player.getPlatform().equals("Nintendo")) {
+		}else if(player.getPlatform().equalsIgnoreCase("Nintendo")) {
 			
 			if(position == 0) {
+				
         		nintTable1.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Nintendo") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Nintendo");
+            		
+            		nintTable1.getItems().clear();
+  		
+            	}
         	}else if(position == 1) {
+        		
         		nintTable2.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Nintendo") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Nintendo");
+            		
+            		nintTable2.getItems().clear();
+  		
+            	}
         	}else if(position == 2) {
+        		
         		nintTable3.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Nintendo") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Nintendo");
+            		
+            		nintTable3.getItems().clear();
+  		
+            	}
+
         	}else if(position == 3) {
         		nintTable4.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Nintendo") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Nintendo");
+            		
+            		nintTable4.getItems().clear();
+  		
+            	}
         	}else if(position == 4) {
         		nintTable5.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "Nintendo") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "Nintendo");
+            		
+            		nintTable5.getItems().clear();
+  		
+            	}
         	}
 			
-		}else if(player.getPlatform().equals("iPhone")) {
+		}else if(player.getPlatform().equalsIgnoreCase("iPhone")) {
 			
 			if(position == 0) {
         		iphoneTable1.getItems().addAll(player);
+        		
+        			if(game.QueueFull(position, "iPhone") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "iPhone");
+            		
+            		iphoneTable1.getItems().clear();
+  		
+            	}
         	}else if(position == 1) {
         		iphoneTable2.getItems().addAll(player);
+        		
+        		if(game.QueueFull(position, "iPhone") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "iPhone");
+            		
+            		iphoneTable2.getItems().clear();
+  		
+            	}
         	}else if(position == 2) {
         		iphoneTable3.getItems().addAll(player);
+        		if(game.QueueFull(position, "iPhone") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "iPhone");
+            		
+            		iphoneTable3.getItems().clear();
+  		
+            	}
         	}else if(position == 3) {
         		iphoneTable4.getItems().addAll(player);
+        		if(game.QueueFull(position, "iPhone") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "iPhone");
+            		
+            		iphoneTable4.getItems().clear();
+  		
+            	}
         	}else if(position == 4) {
         		iphoneTable5.getItems().addAll(player);
+        		if(game.QueueFull(position, "iPhone") == true) {
+            		
+            		Alert dialogue = new Alert(AlertType.INFORMATION);
+            		dialogue.setTitle("Cola llena");
+            		dialogue.setHeaderText(null);
+            		dialogue.setContentText("Cola lista para entrar a partida");
+            		dialogue.initStyle(StageStyle.UTILITY);
+            		dialogue.showAndWait();
+            		game.removeQueue(position, "iPhone");
+            		
+            		iphoneTable5.getItems().clear();
+  		
+            	}
         	}
 			
 		}
@@ -975,6 +1263,39 @@ public class Controller implements Initializable{
             iphoneC5.setCellValueFactory(new PropertyValueFactory("name"));
             
             pcTable2.getItems().addAll(new Player("agv19x", "PC", 30, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("KaoWinchester", "PC", 15, new Gun("Pickaxe", 0)));
+            pcTable1.getItems().addAll(new Player("KaoWinchester", "PC", 15, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("MelquiPittacus2", "Playstation", 15, new Gun("Pickaxe", 0)));
+            playTable1.getItems().addAll(new Player("MelquiPittacus2", "Playstation", 15, new Gun("Pickaxe", 0)));
+           
+            game.addPlayer(new Player("afedo", "Xbox", 56, new Gun("Pickaxe", 0)));
+            xboxTable3.getItems().addAll(new Player("afedo", "Xbox", 15, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Judas", "Nintendo", 89, new Gun("Pickaxe", 0)));
+            nintTable5.getItems().addAll(new Player("Judas", "Nintendo", 89, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Carlos", "Nintendo", 30, new Gun("Pickaxe", 0)));
+            nintTable2.getItems().addAll(new Player("Carlos", "Nintendo", 30, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Claudio", "iPhone", 10, new Gun("Pickaxe", 0)));
+            iphoneTable1.getItems().addAll(new Player("Claudio", "iPhone", 33, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Virginia", "iPhone", 40, new Gun("Pickaxe", 0)));
+            iphoneTable3.getItems().addAll(new Player("Virginia", "iPhone", 40, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Julián", "PC", 41, new Gun("Pickaxe", 0)));
+            pcTable3.getItems().addAll(new Player("Julián", "PC", 41, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Diego", "Playstation", 60, new Gun("Pickaxe", 0)));
+            playTable4.getItems().addAll(new Player("Diego", "Playstation", 60, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Paulina", "PC", 80, new Gun("Pickaxe", 0)));
+            pcTable5.getItems().addAll(new Player("Paulina", "PC", 80, new Gun("Pickaxe", 0)));
+            
+            game.addPlayer(new Player("Elena", "Xbox", 85, new Gun("Pickaxe", 0)));
+            xboxTable5.getItems().addAll(new Player("Elena", "Xbox", 85, new Gun("Pickaxe", 0)));
             
     }
 

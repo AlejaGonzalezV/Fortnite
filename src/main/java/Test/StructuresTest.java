@@ -5,17 +5,18 @@ import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.Test;
 
+import junit.framework.TestCase;
 import structures.Structures;
 
-public class StructuresTest {
+public class StructuresTest extends TestCase{
 
 	private String firstElement;
-	private Structures<String> estructure;
+	private Structures<String> structure;
 	
 	void stageOne() {
 		
 		firstElement = "hope";
-		estructure = new Structures<String>();
+		structure = new Structures<String>();
 		
 	}
 
@@ -24,29 +25,36 @@ public class StructuresTest {
 		
 		stageOne();
 		
-		estructure.push(firstElement);
+		structure.push(firstElement);
 		
-		assertEquals(estructure.getTop(), firstElement);
+		assertEquals(structure.getTop(), firstElement);
 	}
 	
 	@Test
-	public void testPop() throws Exception {
+	public void testPop() {
 		stageOne();
+
 		
-		estructure.push(firstElement);
+		structure.push(firstElement);
 		
-		String actual = estructure.pop();
-		
-		assertEquals(estructure.getTop(), null);
+		try {
+			String actual = structure.pop();
+			System.out.println(structure.getTop());
+			assertEquals(structure.getTop(), null);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
 	}
+	
 	@Test
 	public void testTop() throws Exception {
 		
 		stageOne();
 		
-		estructure.push(firstElement);
+		structure.push(firstElement);
 		
-		String actual = estructure.top();
+		String actual = structure.top();
 		
 		assertEquals(actual, firstElement);
 		
@@ -55,9 +63,9 @@ public class StructuresTest {
 	public void TestIsEmptyS() {
 		
 		stageOne();
-		estructure.push(firstElement);
+		structure.push(firstElement);
 		
-		assertTrue(false == estructure.isEmptyS());
+		assertTrue(false == structure.isEmptyS());
 		
 	}
 	@Test
@@ -65,26 +73,26 @@ public class StructuresTest {
 		
 		stageOne();
 		
-		estructure.enqueque(firstElement);
+		structure.enqueque(firstElement);
 		
-		assertTrue(false == estructure.isEmptyQ());
+		assertTrue(false == structure.isEmptyQ());
 	}
 	@Test
 	public void testEnqueque()  {
 		
 		stageOne();
 		
-		estructure.enqueque(firstElement);
+		structure.enqueque(firstElement);
 		
-		assertTrue(false == estructure.isEmptyQ());
+		assertTrue(false == structure.isEmptyQ());
 
 	}
 	@Test
 	public void testFront() throws Exception {
 		
 		stageOne();
-		estructure.enqueque(firstElement);
-		String actual = estructure.front();
+		structure.enqueque(firstElement);
+		String actual = structure.front();
 		assertEquals(actual, firstElement);
 	}
 	
@@ -92,9 +100,9 @@ public class StructuresTest {
 	public void testDequeque() throws Exception {
 		
 		stageOne();
-		estructure.enqueque(firstElement);
+		structure.enqueque(firstElement);
 		
-		String actual = estructure.dequeque();
+		String actual = structure.dequeque();
 		
 		assertEquals(actual, firstElement);
 		
